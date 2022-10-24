@@ -6,7 +6,9 @@
 package com.mycompany.texaspoker;
 import java.awt.Color;
 //import java.awt.Dimension;
-//import javax.swing.JFrame;
+import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  *
@@ -46,9 +48,11 @@ public class TexasPoker {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Settings_Interface2 frame = new Settings_Interface2();
+                
                 //Color color = new Color(180, 192 ,250);
                 Color color = new Color(84, 151 ,220);
                 frame.getContentPane().setBackground(color);
+                
                 frame.setVisible(true);
             }
         });
