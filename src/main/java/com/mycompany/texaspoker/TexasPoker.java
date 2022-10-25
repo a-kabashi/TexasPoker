@@ -17,7 +17,7 @@ import java.awt.*;
 public class TexasPoker {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Texas Poker");
         
            
      
@@ -47,11 +47,13 @@ public class TexasPoker {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Settings_Interface2 frame = new Settings_Interface2();
+                
+                 Settings_Interface2 frame = new Settings_Interface2();
                 
                 //Color color = new Color(180, 192 ,250);
-                Color color = new Color(84, 151 ,220);
-                frame.getContentPane().setBackground(color);
+                //Color color = new Color(84, 151 ,220);
+                //Color color = new Color(35, 67 ,170);
+                //frame.getContentPane().setBackground(color);
                 
                 frame.setVisible(true);
             }

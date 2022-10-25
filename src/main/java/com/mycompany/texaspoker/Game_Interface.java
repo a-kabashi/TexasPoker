@@ -32,23 +32,24 @@ public class Game_Interface extends javax.swing.JFrame {
         setTitle("Texas Poker Game");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 2, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 0));
         jLabel1.setText("Texas Poker");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(345, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(204, 204, 204)
                 .addComponent(jLabel1)
-                .addGap(316, 316, 316))
+                .addContainerGap(250, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(121, 121, 121)
+                .addGap(77, 77, 77)
                 .addComponent(jLabel1)
-                .addContainerGap(307, Short.MAX_VALUE))
+                .addContainerGap(308, Short.MAX_VALUE))
         );
 
         pack();
