@@ -1,0 +1,133 @@
+
+package PokerGameSettings;
+
+import javax.swing.*;
+
+import java.util.Scanner;
+
+public class PokerGame extends JFrame {
+
+
+
+    public PokerGame(){
+
+        String input = JOptionPane.showInputDialog("1. Player Name\n2. Game Difficulty\n3. Buy in Amount\n4. Exit the game");
+        int selection = Integer.parseInt(input);
+        Scanner Kybd = new Scanner(System.in);
+
+        while (selection < 5) {
+            switch (selection) {
+                case 1 :
+                    String input1 = JOptionPane.showInputDialog("1. Rename Player Name\n2.Delete Existing Player Name\n3.Create New Player");
+
+                    int selection1 = Integer.parseInt(input1);
+                    Scanner kybd = new Scanner(System.in);
+
+                    while (selection1 < 4) {
+                        switch (selection1) {
+                            case 1:
+                                String rename = JOptionPane.showInputDialog(null, "Enter Existing Player Name");
+                                String message = "You have entered... " + rename;
+                                JOptionPane.showMessageDialog (null, message);
+                                break;
+
+                            case 2:
+                                String delete = JOptionPane.showInputDialog(null, "Delete existing Player name");
+                                String message1 = "Deleted..." + delete;
+                                JOptionPane.showMessageDialog (null, message1);
+                                break;
+
+                            case 3:
+                                String createNew = JOptionPane.showInputDialog(null, "Create new Player name");
+                                String message2 = createNew + "...Welcome! Hope you will enjoy" ;
+                                JOptionPane.showMessageDialog (null, message2);
+                                break;
+                        }
+                    }
+                    break;
+                case 2 :
+                    String input2 = JOptionPane.showInputDialog("1. Easy \n2. Medium \n3. Hard");
+
+                    int selection2 = Integer.parseInt(input2);
+                    Scanner kybd1 = new Scanner(System.in);
+
+                    while (selection2 < 4) {
+                        switch (selection2) {
+                            case 1:
+                                String message = "You have selected difficulty level: Easy";
+                                JOptionPane.showMessageDialog (null, message);
+                                break;
+
+                            case 2:
+                                String message1 = "You have selected difficulty level: Medium";
+                                JOptionPane.showMessageDialog (null, message1);
+                                break;
+
+                            case 3:
+                                String message2 = "You have selected difficulty level: Hard";
+                                JOptionPane.showMessageDialog (null, message2);
+                                break;
+                        }
+                    }
+                    break;
+                case 3 :
+                    String input3 = JOptionPane.showInputDialog("The Minimum amount of entry fee is 10$...\n How much money you hope to invest???");
+                    int money = Integer.parseInt(input3);
+                    if(money<10){
+                        String message1 = "Sorry! We can't proceed with that amount";
+                        JOptionPane.showMessageDialog (null, message1);
+                    }else {
+                        String message1 = "Welcome!!! Hope you will have fun!";
+                        JOptionPane.showMessageDialog (null, message1);
+                    }
+                    break;
+                case 4 :
+                    String message1 = "Successfully Exited! Thank You For playing!";
+                    //JOptionPane.showMessageDialog (null, message1);
+                    break;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+package PokerGameSettings;
+
+
+import javax.swing.JFrame;
+
+
+public class GameSettings extends JFrame{
+
+    private static final long serialVersionUID = 1L;
+
+    public GameSettings() {
+        initUI();
+    }
+
+    private void initUI() {
+
+        add(new PokerGame());
+
+        setTitle("Poker Game");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(380, 420);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GameSettings().setVisible(true);
+            }
+        });
+    }
+}
+	
+	
