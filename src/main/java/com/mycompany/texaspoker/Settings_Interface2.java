@@ -138,7 +138,7 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         String player2_BuyInAmount = jTextField4.getText();
         double d_player2_BuyInAmount = Double.parseDouble(player2_BuyInAmount);
         
-        Game_Interface game = new Game_Interface();
+        Game_Interface game = new Game_Interface(player1_Name,d_player1_BuyInAmount,player2_Name,d_player2_BuyInAmount);
         //Color color = new Color(180, 192 ,250);
         //Color color = new Color(84, 151 ,220);
         //Color color = new Color(35, 67 ,170);

@@ -49,7 +49,6 @@ public class TexasPoker {
             public void run() {
                 
                  Settings_Interface2 frame = new Settings_Interface2();
-                
                 //Color color = new Color(180, 192 ,250);
                 //Color color = new Color(84, 151 ,220);
                 //Color color = new Color(35, 67 ,170);
