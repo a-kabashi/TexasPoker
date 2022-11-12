@@ -5,8 +5,8 @@
 package com.mycompany.texaspoker;
 import java.awt.Color;
 import java.awt.Image;
-//import javax.swing.JFrame;
-//import java.awt.*;
+import javax.swing.JFrame;
+import java.awt.*;
 //import java.awt.event.WindowListener;
 import java.awt.event.WindowEvent;   
 import javax.swing.ImageIcon;
@@ -63,37 +63,51 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Texas Poker Setting Interface 2");
         setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
         jLabel1.setText("Player-1 Name");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 130, -1));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(270, 50, 130, 19);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 0));
         jLabel2.setText("Player-1 Buy-In Amount");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 176, -1));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(270, 90, 176, 19);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 0));
         jLabel3.setText("Player-2 Name");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 130, -1));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(270, 130, 130, 19);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 0));
         jLabel4.setText("Player-2 Buy-In Amount");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 180, 20));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 110, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 70, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 110, -1));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(270, 170, 180, 20);
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(410, 50, 110, 22);
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(450, 90, 70, 22);
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(410, 130, 110, 22);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 70, -1));
+        getContentPane().add(jTextField4);
+        jTextField4.setBounds(450, 170, 70, 22);
 
         jButton1.setBackground(new java.awt.Color(0, 153, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -104,7 +118,8 @@ public class Settings_Interface2 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 100, -1));
+        getContentPane().add(jButton1);
+        jButton1.setBounds(400, 300, 100, 25);
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -115,11 +130,10 @@ public class Settings_Interface2 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 110, -1));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\tasni\\Downloads\\bg_image.jpg")); // NOI18N
-        jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 360));
+        getContentPane().add(jButton2);
+        jButton2.setBounds(40, 300, 110, 25);
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 20, 540, 360);
 
         pack();
         setLocationRelativeTo(null);
@@ -127,16 +141,40 @@ public class Settings_Interface2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        if(jTextField1.getText() == null){
+            player1.setName("Player1");
+            System.out.println(player1.getName());
+        } else{
+        player1.setName(jTextField1.getText());
+        System.out.println(player1.getName());
+        }
         
-        String player1_Name = jTextField1.getText();
+        String buyInAmount1 = jTextField2.getText();
+        if(buyInAmount1 == null){
+            player1.setBuyInAmount(0);
+            System.out.println(player1.getBuyInAmount());
+        } else{
+        player1.setBuyInAmount(Integer.parseInt(buyInAmount1));
+        System.out.println(player1.getBuyInAmount());
+        }
         
-        String player1_BuyInAmount = jTextField2.getText();
-        double d_player1_BuyInAmount = Double.parseDouble(player1_BuyInAmount);
+        if(jTextField3.getText() == null){
+            player2.setName("Player2");
+            System.out.println(player2.getName());
+        } else{
+        player2.setName(jTextField3.getText());
+        System.out.println(player2.getName());
+        }
+        String buyInAmount2 = jTextField4.getText();
+        player2.setBuyInAmount(Integer.parseInt(buyInAmount2));
+        //String player1_BuyInAmount = jTextField2.getText();
+        //double d_player1_BuyInAmount = Double.parseDouble(player1_BuyInAmount);
+        //System.out.println(player1.getName()+", buy in amount is:"+player1.getBuyInAmount());
+        //System.out.println(player2.getName()+", buy in amount is:"+player2.getBuyInAmount());
+        //String player2_Name = jTextField3.getText();
         
-        String player2_Name = jTextField3.getText();
-        
-        String player2_BuyInAmount = jTextField4.getText();
-        double d_player2_BuyInAmount = Double.parseDouble(player2_BuyInAmount);
+        //String player2_BuyInAmount = jTextField4.getText();
+        //double d_player2_BuyInAmount = Double.parseDouble(player2_BuyInAmount);
         
         Game_Interface game = new Game_Interface();
         //Color color = new Color(180, 192 ,250);
@@ -144,6 +182,10 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         //Color color = new Color(35, 67 ,170);
         Color color = new Color(10, 14 ,147);
         game.getContentPane().setBackground(color);
+        game.setLocationRelativeTo(null);
+        //game.setLayout(new BorderLayout());
+        //game.setLayout(null);
+        //game.pack();
         game.setVisible(true);
        
         //System.exit(0);
@@ -163,6 +205,10 @@ public class Settings_Interface2 extends javax.swing.JFrame {
                 
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,7 +244,9 @@ public class Settings_Interface2 extends javax.swing.JFrame {
 //            }
 //        });
 //    }
-
+    
+    Player player1 = new Player();
+    Player player2 = new Player();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

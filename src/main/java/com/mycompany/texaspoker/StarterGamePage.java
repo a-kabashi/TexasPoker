@@ -16,7 +16,7 @@ public class StarterGamePage extends javax.swing.JFrame {
     public StarterGamePage() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -61,7 +61,12 @@ public class StarterGamePage extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select number of player/s", "1", "2", "3", "4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select number of player/s", "1", "2" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(255, 255, 0));
         jButton3.setText("Help");
@@ -137,9 +142,31 @@ public class StarterGamePage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        GamePage gameWindow = new GamePage();
-        gameWindow.setVisible(true);
+        //Settings_Interface2 gameWindow = new Settings_Interface2();
+        if(jComb == 0){
+            Settings_Interface2 interface2 = new Settings_Interface2();
+            status = false;
+            interface2.setVisible(true);
+            
+            System.out.println("start1");
+            
+            //new StarterGamePage().setVisible(false);
+        }else {
+            System.out.println("start2");
+            status = false;
+            GamePage gP = new GamePage();
+            gP.setVisible(true);
+            
+            //new StarterGamePage().setVisible(false);
+            //gameWindow.setVisible(true);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        jComb = jComboBox1.getSelectedIndex();
+        System.out.println(jComb);
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,11 +198,12 @@ public class StarterGamePage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StarterGamePage().setVisible(true);
+                //new StarterGamePage().setVisible(true);
             }
         });
     }
-
+    int jComb;
+    boolean status = true;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -184,4 +212,8 @@ public class StarterGamePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    void setVesible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
