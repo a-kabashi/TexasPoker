@@ -151,6 +151,7 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         Color color = new Color(10, 14 ,147);
         game.getContentPane().setBackground(color);
         game.setVisible(true);
+        this.dispose();
        
         //System.exit(0);
         //Settings_Interface2 frame = new Settings_Interface2();
