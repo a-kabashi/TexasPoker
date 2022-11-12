@@ -3,14 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.texaspoker;
+
 import java.awt.Color;
-import java.awt.Image;
-//import javax.swing.JFrame;
-//import java.awt.*;
-//import java.awt.event.WindowListener;
-import java.awt.event.WindowEvent;   
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
+
+
 
 /**
  *
@@ -63,37 +59,45 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Texas Poker Setting Interface 2");
         setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
         jLabel1.setText("Player-1 Name");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 130, -1));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(270, 50, 130, 19);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 0));
         jLabel2.setText("Player-1 Buy-In Amount");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 176, -1));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(270, 90, 176, 19);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 0));
         jLabel3.setText("Player-2 Name");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 130, -1));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(270, 130, 130, 19);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 0));
         jLabel4.setText("Player-2 Buy-In Amount");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 180, 20));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 110, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 70, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 110, -1));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(270, 170, 180, 20);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(410, 50, 110, 22);
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(450, 90, 70, 22);
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(410, 130, 110, 22);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 70, -1));
+        getContentPane().add(jTextField4);
+        jTextField4.setBounds(450, 170, 70, 22);
 
         jButton1.setBackground(new java.awt.Color(0, 153, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -104,7 +108,8 @@ public class Settings_Interface2 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 100, -1));
+        getContentPane().add(jButton1);
+        jButton1.setBounds(400, 285, 100, 30);
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -115,13 +120,14 @@ public class Settings_Interface2 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 110, -1));
+        getContentPane().add(jButton2);
+        jButton2.setBounds(40, 285, 110, 30);
 
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\tasni\\Downloads\\bg_image.jpg")); // NOI18N
-        jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 360));
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, -10, 560, 380);
 
-        pack();
+        setSize(new java.awt.Dimension(554, 387));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
