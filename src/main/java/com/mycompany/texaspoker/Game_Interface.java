@@ -36,13 +36,13 @@ public class Game_Interface extends javax.swing.JFrame {
         jButton2_Restart = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5_Raise = new javax.swing.JButton();
+        Raise_Player1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Player1_Name = new javax.swing.JLabel();
         Player1_BuyInAmount = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
-        RaiseAction_Player2 = new javax.swing.JButton();
+        Raise_Player2 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
@@ -87,13 +87,13 @@ public class Game_Interface extends javax.swing.JFrame {
         jButton4.setForeground(new java.awt.Color(255, 255, 0));
         jButton4.setText("Call");
 
-        jButton5_Raise.setBackground(new java.awt.Color(153, 0, 204));
-        jButton5_Raise.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jButton5_Raise.setForeground(new java.awt.Color(255, 255, 0));
-        jButton5_Raise.setText("Raise");
-        jButton5_Raise.addActionListener(new java.awt.event.ActionListener() {
+        Raise_Player1.setBackground(new java.awt.Color(153, 0, 204));
+        Raise_Player1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        Raise_Player1.setForeground(new java.awt.Color(255, 255, 0));
+        Raise_Player1.setText("Raise");
+        Raise_Player1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5_Raise_ActionPerformed(evt);
+                Raise_Player1_ActionPerformed(evt);
             }
         });
 
@@ -116,13 +116,13 @@ public class Game_Interface extends javax.swing.JFrame {
         jButton6.setForeground(new java.awt.Color(255, 255, 0));
         jButton6.setText("Call");
 
-        RaiseAction_Player2.setBackground(new java.awt.Color(153, 0, 204));
-        RaiseAction_Player2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        RaiseAction_Player2.setForeground(new java.awt.Color(255, 255, 0));
-        RaiseAction_Player2.setText("Raise");
-        RaiseAction_Player2.addActionListener(new java.awt.event.ActionListener() {
+        Raise_Player2.setBackground(new java.awt.Color(153, 0, 204));
+        Raise_Player2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        Raise_Player2.setForeground(new java.awt.Color(255, 255, 0));
+        Raise_Player2.setText("Raise");
+        Raise_Player2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RaiseAction_Player2ActionPerformed(evt);
+                Raise_Player2ActionPerformed(evt);
             }
         });
 
@@ -164,7 +164,7 @@ public class Game_Interface extends javax.swing.JFrame {
                                     .addGap(18, 18, 18)
                                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton5_Raise, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Raise_Player1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(310, 310, 310))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -183,7 +183,7 @@ public class Game_Interface extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(RaiseAction_Player2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Raise_Player2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(36, 36, 36)
@@ -223,10 +223,10 @@ public class Game_Interface extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3)
                     .addComponent(jButton4)
-                    .addComponent(jButton5_Raise)
+                    .addComponent(Raise_Player1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton6)
-                        .addComponent(RaiseAction_Player2)
+                        .addComponent(Raise_Player2)
                         .addComponent(jButton8)))
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -259,21 +259,20 @@ public class Game_Interface extends javax.swing.JFrame {
         frame.setVisible(true);
     }//GEN-LAST:event_jButton2_RestartActionPerformed
 
-    private void jButton5_Raise_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_Raise_ActionPerformed
+    private void Raise_Player1_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Raise_Player1_ActionPerformed
           // TODO add your handling code here:
           Player1_RaiseAction_InternalFrame internalFrame = new Player1_RaiseAction_InternalFrame();
-          this.add(internalFrame);
-          internalFrame.show();
+          internalFrame.setVisible(true);
    
-    }//GEN-LAST:event_jButton5_Raise_ActionPerformed
+    }//GEN-LAST:event_Raise_Player1_ActionPerformed
 
-    private void RaiseAction_Player2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RaiseAction_Player2ActionPerformed
+    private void Raise_Player2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Raise_Player2ActionPerformed
         // TODO add your handling code here:
         Player2_RaiseAction_InternalFrame internalFrame = new Player2_RaiseAction_InternalFrame();
         //this.add(internalFrame);
         internalFrame.setVisible(true);
         //internalFrame.show();
-    }//GEN-LAST:event_RaiseAction_Player2ActionPerformed
+    }//GEN-LAST:event_Raise_Player2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,12 +314,12 @@ public class Game_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel Player1_Name;
     private javax.swing.JLabel Player2_BuyInAmount;
     private javax.swing.JLabel Player2_Name;
-    private javax.swing.JButton RaiseAction_Player2;
+    private javax.swing.JButton Raise_Player1;
+    private javax.swing.JButton Raise_Player2;
     private javax.swing.JButton jButton1_Exit;
     private javax.swing.JButton jButton2_Restart;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5_Raise;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;

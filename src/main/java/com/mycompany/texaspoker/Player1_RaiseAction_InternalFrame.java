@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.texaspoker;
 
@@ -10,7 +10,7 @@ import java.awt.Color;
  *
  * @author tasni
  */
-public class Player1_RaiseAction_InternalFrame extends javax.swing.JInternalFrame {
+public class Player1_RaiseAction_InternalFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form Player1_RaiseAction_InternalFrame
@@ -32,26 +32,22 @@ public class Player1_RaiseAction_InternalFrame extends javax.swing.JInternalFram
 
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        Confirm_RaiseAction_P1 = new javax.swing.JButton();
+        ConfirmButton_Player1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setClosable(true);
-        setForeground(java.awt.Color.white);
-        setIconifiable(true);
-        setResizable(true);
-        setTitle("Player1 - Raise Action");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Player 1");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
         jLabel1.setText("Enter your bet/raise amount");
 
-        Confirm_RaiseAction_P1.setBackground(new java.awt.Color(0, 153, 0));
-        Confirm_RaiseAction_P1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        Confirm_RaiseAction_P1.setForeground(new java.awt.Color(255, 255, 0));
-        Confirm_RaiseAction_P1.setText("Confirm");
-        Confirm_RaiseAction_P1.addActionListener(new java.awt.event.ActionListener() {
+        ConfirmButton_Player1.setBackground(new java.awt.Color(0, 102, 0));
+        ConfirmButton_Player1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        ConfirmButton_Player1.setForeground(new java.awt.Color(255, 255, 0));
+        ConfirmButton_Player1.setText("Confirm");
+        ConfirmButton_Player1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Confirm_RaiseAction_P1ActionPerformed(evt);
+                ConfirmButton_Player1ActionPerformed(evt);
             }
         });
 
@@ -60,41 +56,76 @@ public class Player1_RaiseAction_InternalFrame extends javax.swing.JInternalFram
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Confirm_RaiseAction_P1)
-                        .addGap(75, 75, 75))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(ConfirmButton_Player1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Confirm_RaiseAction_P1)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ConfirmButton_Player1)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        setBounds(0, 0, 245, 171);
+        pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Confirm_RaiseAction_P1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Confirm_RaiseAction_P1ActionPerformed
+    private void ConfirmButton_Player1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButton_Player1ActionPerformed
         // TODO add your handling code here:
-       this.dispose();
-    }//GEN-LAST:event_Confirm_RaiseAction_P1ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_ConfirmButton_Player1ActionPerformed
 
+    /**
+     * @param args the command line arguments
+     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Player1_RaiseAction_InternalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Player1_RaiseAction_InternalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Player1_RaiseAction_InternalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Player1_RaiseAction_InternalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//       java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Player1_RaiseAction_InternalFrame().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Confirm_RaiseAction_P1;
+    private javax.swing.JButton ConfirmButton_Player1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

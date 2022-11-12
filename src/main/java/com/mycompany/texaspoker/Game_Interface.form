@@ -39,7 +39,7 @@
                                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                                   <Component id="jButton4" min="-2" pref="64" max="-2" attributes="0"/>
                                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                  <Component id="jButton5_Raise" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="Raise_Player1" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="310" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
@@ -63,7 +63,7 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jButton6" min="-2" pref="64" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="RaiseAction_Player2" min="-2" pref="61" max="-2" attributes="0"/>
+                              <Component id="Raise_Player2" min="-2" pref="61" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel7" min="-2" pref="110" max="-2" attributes="0"/>
@@ -117,10 +117,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jButton3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton5_Raise" min="-2" max="-2" attributes="0"/>
+                  <Component id="Raise_Player1" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="RaiseAction_Player2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Raise_Player2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -217,7 +217,7 @@
         <Property name="text" type="java.lang.String" value="Call"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5_Raise">
+    <Component class="javax.swing.JButton" name="Raise_Player1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="0" red="99" type="rgb"/>
@@ -231,7 +231,7 @@
         <Property name="text" type="java.lang.String" value="Raise"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5_Raise_ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Raise_Player1_ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -290,7 +290,7 @@
         <Property name="text" type="java.lang.String" value="Call"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="RaiseAction_Player2">
+    <Component class="javax.swing.JButton" name="Raise_Player2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="0" red="99" type="rgb"/>
@@ -304,7 +304,7 @@
         <Property name="text" type="java.lang.String" value="Raise"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RaiseAction_Player2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Raise_Player2ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
