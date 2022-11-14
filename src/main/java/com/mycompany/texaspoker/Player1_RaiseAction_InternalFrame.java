@@ -31,7 +31,7 @@ public class Player1_RaiseAction_InternalFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextField1_Bet_Amount_Player1 = new javax.swing.JTextField();
         ConfirmButton_Player1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -40,6 +40,12 @@ public class Player1_RaiseAction_InternalFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
         jLabel1.setText("Enter your bet/raise amount");
+
+        jTextField1_Bet_Amount_Player1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1_Bet_Amount_Player1ActionPerformed(evt);
+            }
+        });
 
         ConfirmButton_Player1.setBackground(new java.awt.Color(0, 102, 0));
         ConfirmButton_Player1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -62,9 +68,9 @@ public class Player1_RaiseAction_InternalFrame extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField1_Bet_Amount_Player1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
+                        .addGap(64, 64, 64)
                         .addComponent(ConfirmButton_Player1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -74,10 +80,10 @@ public class Player1_RaiseAction_InternalFrame extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1_Bet_Amount_Player1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(ConfirmButton_Player1)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -87,7 +93,26 @@ public class Player1_RaiseAction_InternalFrame extends javax.swing.JFrame {
     private void ConfirmButton_Player1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButton_Player1ActionPerformed
         // TODO add your handling code here:
         this.dispose();
+        
+        /*String player1_Bet_Amount = jTextField1_Bet_Amount_Player1.getText();
+        int I_player1_Bet_Amount = Integer.parseInt(player1_Bet_Amount);
+        
+        Game_Interface game = new Game_Interface();
+        String S_Player1_BuyInAmount = game.Player1_BuyInAmount.getText();
+        int Player1_BuyInAmount = Integer.parseInt(S_Player1_BuyInAmount);
+        
+        
+        int Player1_Remaining_Amount = (Player1_BuyInAmount - I_player1_Bet_Amount);
+        Game_Interface game1 = new Game_Interface(Player1_Remaining_Amount);
+        game.Player1_BuyInAmount.setText(Player1_Remaining_Amount + "");
+        */
+        
     }//GEN-LAST:event_ConfirmButton_Player1ActionPerformed
+
+    private void jTextField1_Bet_Amount_Player1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_Bet_Amount_Player1ActionPerformed
+        // TODO add your handling code here:
+         
+    }//GEN-LAST:event_jTextField1_Bet_Amount_Player1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,6 +152,6 @@ public class Player1_RaiseAction_InternalFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ConfirmButton_Player1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField1_Bet_Amount_Player1;
     // End of variables declaration//GEN-END:variables
 }

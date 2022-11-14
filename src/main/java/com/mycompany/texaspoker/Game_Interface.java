@@ -13,13 +13,14 @@ public class Game_Interface extends javax.swing.JFrame {
     /**
      * Creates new form Game_Interface
      */
-    public Game_Interface(String player1_name, double p1_buy_in_amount, String player2_name, double p2_buy_in_amount) {
+    public Game_Interface(String player1_name, int p1_buy_in_amount, String player2_name, int p2_buy_in_amount) {
         initComponents();
         Player1_Name.setText(player1_name);
         Player1_BuyInAmount.setText(p1_buy_in_amount + "");
         Player2_Name.setText(player2_name);
         Player2_BuyInAmount.setText(p2_buy_in_amount + "");
     }
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -261,8 +262,11 @@ public class Game_Interface extends javax.swing.JFrame {
 
     private void Raise_Player1_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Raise_Player1_ActionPerformed
           // TODO add your handling code here:
+          String Player1_BuyInAmount = this.Player1_BuyInAmount.getText();
           Player1_RaiseAction_InternalFrame internalFrame = new Player1_RaiseAction_InternalFrame();
           internalFrame.setVisible(true);
+          
+          
    
     }//GEN-LAST:event_Raise_Player1_ActionPerformed
 

@@ -85,11 +85,11 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(270, 170, 180, 20);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(410, 50, 110, 22);
+        jTextField1.setBounds(410, 50, 110, 30);
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(450, 90, 70, 22);
+        jTextField2.setBounds(450, 90, 70, 30);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(410, 130, 110, 22);
+        jTextField3.setBounds(410, 130, 110, 30);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,7 +97,7 @@ public class Settings_Interface2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(450, 170, 70, 22);
+        jTextField4.setBounds(450, 170, 70, 30);
 
         jButton1.setBackground(new java.awt.Color(0, 153, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -137,14 +137,14 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         String player1_Name = jTextField1.getText();
         
         String player1_BuyInAmount = jTextField2.getText();
-        double d_player1_BuyInAmount = Double.parseDouble(player1_BuyInAmount);
+        int I_player1_BuyInAmount = Integer.parseInt(player1_BuyInAmount);
         
         String player2_Name = jTextField3.getText();
         
         String player2_BuyInAmount = jTextField4.getText();
-        double d_player2_BuyInAmount = Double.parseDouble(player2_BuyInAmount);
+        int I_player2_BuyInAmount = Integer.parseInt(player2_BuyInAmount);
         
-        Game_Interface game = new Game_Interface(player1_Name,d_player1_BuyInAmount,player2_Name,d_player2_BuyInAmount);
+        Game_Interface game = new Game_Interface(player1_Name,I_player1_BuyInAmount,player2_Name,I_player2_BuyInAmount);
         //Color color = new Color(180, 192 ,250);
         //Color color = new Color(84, 151 ,220);
         //Color color = new Color(35, 67 ,170);
