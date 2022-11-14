@@ -24,7 +24,7 @@ public class Player {
     }
     
     public String getName(){
-        return name;
+        return this.name;
     }
     
     public void setBuyInAmount(int buyInAmount){
@@ -32,7 +32,7 @@ public class Player {
     }
     
     public int getBuyInAmount(){
-        return buyInAmount;
+        return this.buyInAmount;
     }
     
     public void setBet(int bet) {
@@ -40,7 +40,7 @@ public class Player {
     }
 
     public int getBet(){
-        return bet;
+        return this.bet;
     }
     
     public void setDecision(int decision){
@@ -48,7 +48,7 @@ public class Player {
     }
     
     public int getDecision(){
-        return decision;
+        return this.decision;
     }
     
     public void setWin(boolean win){
@@ -56,7 +56,7 @@ public class Player {
     }
     
     public boolean getWin(){
-        return win;
+        return this.win;
     }
 
 }

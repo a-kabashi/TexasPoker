@@ -5,7 +5,6 @@
 
 package com.mycompany.texaspoker;
 import java.awt.Color;
-//import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.*;
 import java.awt.*;
@@ -20,11 +19,7 @@ public class TexasPoker {
 
         System.out.println("Texas Poker");
         StarterGamePage start = new StarterGamePage();
-        while(start.status){
-            start.setVisible(true);
-        }
-        start.setVisible(false);
-        
+        start.setVisible(true);
         System.out.println("2nd push");   
     }
 }

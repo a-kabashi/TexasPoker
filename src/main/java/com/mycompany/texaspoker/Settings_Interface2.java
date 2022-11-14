@@ -141,41 +141,33 @@ public class Settings_Interface2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(jTextField1.getText() == null){
+        if(jTextField1.getText().equalsIgnoreCase("")){
             player1.setName("Player1");
             System.out.println(player1.getName());
-        } else{
+        }else{
         player1.setName(jTextField1.getText());
         System.out.println(player1.getName());
         }
         
         String buyInAmount1 = jTextField2.getText();
-        if(buyInAmount1 == null){
-            player1.setBuyInAmount(0);
-            System.out.println(player1.getBuyInAmount());
-        } else{
-        player1.setBuyInAmount(Integer.parseInt(buyInAmount1));
-        System.out.println(player1.getBuyInAmount());
+        if(!jTextField2.getText().equalsIgnoreCase("")){
+             player1.setBuyInAmount(Integer.parseInt(buyInAmount1));
+             System.out.println(player1.getBuyInAmount());
         }
         
-        if(jTextField3.getText() == null){
+        if(jTextField3.getText().equalsIgnoreCase("")){
             player2.setName("Player2");
             System.out.println(player2.getName());
-        } else{
+        }else{
         player2.setName(jTextField3.getText());
         System.out.println(player2.getName());
         }
+        
         String buyInAmount2 = jTextField4.getText();
-        player2.setBuyInAmount(Integer.parseInt(buyInAmount2));
-        //String player1_BuyInAmount = jTextField2.getText();
-        //double d_player1_BuyInAmount = Double.parseDouble(player1_BuyInAmount);
-        //System.out.println(player1.getName()+", buy in amount is:"+player1.getBuyInAmount());
-        //System.out.println(player2.getName()+", buy in amount is:"+player2.getBuyInAmount());
-        //String player2_Name = jTextField3.getText();
-        
-        //String player2_BuyInAmount = jTextField4.getText();
-        //double d_player2_BuyInAmount = Double.parseDouble(player2_BuyInAmount);
-        
+        if(!jTextField4.getText().equalsIgnoreCase("")){
+             player2.setBuyInAmount(Integer.parseInt(buyInAmount1));
+             System.out.println(player2.getBuyInAmount());
+        }
         Game_Interface game = new Game_Interface();
         //Color color = new Color(180, 192 ,250);
         //Color color = new Color(84, 151 ,220);
@@ -183,16 +175,8 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         Color color = new Color(10, 14 ,147);
         game.getContentPane().setBackground(color);
         game.setLocationRelativeTo(null);
-        //game.setLayout(new BorderLayout());
-        //game.setLayout(null);
-        //game.pack();
         game.setVisible(true);
-       
-        //System.exit(0);
-        //Settings_Interface2 frame = new Settings_Interface2();
-        //frame.setDefaultCloseOperation(Settings_Interface2.DISPOSE_ON_CLOSE);
-       
-        
+       this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
