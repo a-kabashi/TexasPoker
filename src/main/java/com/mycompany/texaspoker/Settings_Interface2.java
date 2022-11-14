@@ -165,7 +165,7 @@ public class Settings_Interface2 extends javax.swing.JFrame {
         
         String buyInAmount2 = jTextField4.getText();
         if(!jTextField4.getText().equalsIgnoreCase("")){
-             player2.setBuyInAmount(Integer.parseInt(buyInAmount1));
+             player2.setBuyInAmount(Integer.parseInt(buyInAmount2));
              System.out.println(player2.getBuyInAmount());
         }
         Game_Interface game = new Game_Interface();

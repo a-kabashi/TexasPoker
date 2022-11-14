@@ -17,9 +17,8 @@ public class TexasPoker {
 
     public static void main(String[] args) {
 
-        System.out.println("Texas Poker");
+        
         StarterGamePage start = new StarterGamePage();
         start.setVisible(true);
-        System.out.println("2nd push");   
     }
 }
