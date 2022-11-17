@@ -166,7 +166,6 @@ public class StarterGamePage extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
         jComb = jComboBox1.getSelectedIndex();
-        System.out.println(jComb);
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**

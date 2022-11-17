@@ -12,7 +12,7 @@ public class Player {
     private boolean win;
     
     public Player(){
-        this.name = null;
+        this.name = "";
         this.buyInAmount = 0;
         this.bet = 0;
         this.decision = 0;
