@@ -17,7 +17,6 @@ public class TexasPoker {
 
     public static void main(String[] args) {
 
-        
         StarterGamePage start = new StarterGamePage();
         start.setVisible(true);
     }
