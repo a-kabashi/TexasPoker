@@ -132,8 +132,8 @@ public class StarterGamePage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-//        GamePage obj = new GamePage();
-//        obj.setVisible(true);
+        Settings_Interface2 obj = new Settings_Interface2();
+        obj.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
