@@ -132,28 +132,35 @@ public class Settings_Interface2 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        String player1_Name = jTextField1.getText();
-        player1.setName(jTextField1.getText());
+        String text1 = jTextField1.getText();
+        String text2 = jTextField2.getText();
+        String text3 = jTextField3.getText();
+        String text4 = jTextField4.getText();
+        if(text1.equalsIgnoreCase("")){
+            player1.setName("Player1");
+        }else{
+            player1.setName(text1);
+        }
+        if(!text2.equalsIgnoreCase("")){
+            player1.setBuyInAmount(Integer.parseInt(text2));
+        }
+        if(text3.equalsIgnoreCase("")){
+            player2.setName("Player2");
+        }else{
+            player2.setName(text3);
+        }
+        if(!text4.equalsIgnoreCase("")){
+            player2.setBuyInAmount(Integer.parseInt(text4));
+        }
         
-        String player1_BuyInAmount = jTextField2.getText();
-        int I_player1_BuyInAmount = Integer.parseInt(player1_BuyInAmount);
-        player1.setBuyInAmount(I_player1_BuyInAmount);
-        
-        String player2_Name = jTextField3.getText();
-        player2.setName(jTextField3.getText());
-        
-        String player2_BuyInAmount = jTextField4.getText();
-        int I_player2_BuyInAmount = Integer.parseInt(player2_BuyInAmount);
-        player2.setBuyInAmount(I_player2_BuyInAmount);
-        
-        Game_Interface game = new Game_Interface(player1_Name,I_player1_BuyInAmount,player2_Name,I_player2_BuyInAmount);
+        Game_Interface game = new Game_Interface(player1.getName(),player1.getBuyInAmount(),player2.getName(),player2.getBuyInAmount());
         //Color color = new Color(180, 192 ,250);
         //Color color = new Color(84, 151 ,220);
         //Color color = new Color(35, 67 ,170);
         Color color = new Color(10, 14 ,147);
         game.getContentPane().setBackground(color);
         game.setVisible(true);
-        //this.dispose();
+        this.dispose();
        
        
         

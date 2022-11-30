@@ -35,7 +35,6 @@ public class StarterGamePage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\Downloads\\IMG-9530.jpg")); // NOI18N
         jLabel3.setText("jLabel3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -80,16 +79,16 @@ public class StarterGamePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(530, 110, 91, 22);
+        jButton3.setBounds(530, 110, 91, 28);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select number of player/s", "1", "2", "3", "4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select number of player/s", "1", "2" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
         jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(340, 110, 169, 22);
+        jComboBox1.setBounds(340, 110, 169, 26);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));
@@ -97,7 +96,6 @@ public class StarterGamePage extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(310, 20, 214, 32);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\esraa\\Downloads\\IMG-9530.jpg")); // NOI18N
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(0, 0, 800, 360);
@@ -132,12 +130,21 @@ public class StarterGamePage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Settings_Interface2 obj = new Settings_Interface2();
-        obj.setVisible(true);
+        if(comb == 1){
+            Setting_Interface1 gui1 = new Setting_Interface1();
+            gui1.setVisible(true);
+            this.setVisible(false);
+        }else if(comb == 2){
+           Settings_Interface2 obj = new Settings_Interface2();
+            obj.setVisible(true); 
+            this.setVisible(false);
+        }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
+        comb = jComboBox1.getSelectedIndex();
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
@@ -174,7 +181,7 @@ public class StarterGamePage extends javax.swing.JFrame {
             }
         });
     }
-
+    int comb;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
