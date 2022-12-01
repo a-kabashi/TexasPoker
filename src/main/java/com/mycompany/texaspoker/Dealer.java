@@ -3,8 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.texaspoker;
+import java.util.ArrayList;
 import java.util.Random;
-import java.util.Collections;
+
 
 
 /**
@@ -13,6 +14,7 @@ import java.util.Collections;
  */
 class Dealer {
     
+ private ArrayList<Integer> deck;   
  private int[] communityCards; 
  private int[] playerCards;
  
@@ -20,6 +22,7 @@ class Dealer {
   {
     this.communityCards = new int[5];
     this.playerCards = new int[2];
+    this.deck = new ArrayList<Integer>(51);
   }
    
  
