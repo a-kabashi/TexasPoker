@@ -79,7 +79,7 @@ public class StarterGamePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(530, 110, 91, 28);
+        jButton3.setBounds(530, 110, 91, 22);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select number of player/s", "1", "2" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,15 +88,13 @@ public class StarterGamePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(340, 110, 169, 26);
+        jComboBox1.setBounds(340, 110, 170, 22);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText(" Texas Poker Game");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(310, 20, 214, 32);
-
-        jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(0, 0, 800, 360);
 
@@ -118,6 +116,7 @@ public class StarterGamePage extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
