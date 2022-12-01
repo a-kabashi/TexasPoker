@@ -14,10 +14,12 @@ import java.util.Collections;
 class Dealer {
     
  private int[] communityCards; 
+ private int[] playerCards;
  
   Dealer()
   {
     this.communityCards = new int[5];
+    this.playerCards = new int[2];
   }
    
  
@@ -33,4 +35,9 @@ class Dealer {
     return this.communityCards;
 }
  
+public int[] getPlayerTowCards()
+{
+ return this.playerCards; 
+}
+
 }
