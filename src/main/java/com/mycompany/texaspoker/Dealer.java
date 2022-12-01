@@ -4,6 +4,7 @@
  */
 package com.mycompany.texaspoker;
 import java.util.Random;
+import java.util.Collections;
 
 
 /**
@@ -11,6 +12,13 @@ import java.util.Random;
  * @author User
  */
 class Dealer {
+    
+ private int[] communityCards; 
+ 
+  Dealer()
+  {
+    this.communityCards = new int[5];
+  }
    
  
  public int getOneCard(int[] cardNumber) 
@@ -19,4 +27,10 @@ class Dealer {
      int oneCard = card[new Random().nextInt(card.length)];
      return oneCard;
  } 
+ 
+ public int[] getCommunityCards()
+{ 
+    return this.communityCards;
+}
+ 
 }
