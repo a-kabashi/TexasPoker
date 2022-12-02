@@ -5,6 +5,7 @@
 package com.mycompany.texaspoker;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Collections;
 
 
 
@@ -66,6 +67,10 @@ public String identifyWinner(int player1Hand, int player2Hand){
         for(int i = 0; i <= 1; i++) player1Cards[i] = deck.get(i+5);
         for(int i = 0; i <= 1; i++) player2Cards[i] = deck.get(i+7);
     
+    }
+ 
+ public void shuffleDeck(){
+        Collections.shuffle(this.deck);
     }
 
 
