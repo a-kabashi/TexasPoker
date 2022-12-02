@@ -10,7 +10,7 @@ package com.mycompany.texaspoker;
  */
 import java.util.ArrayList;
 import java.util.Random;
-
+import java.util.Collections;
 
 public class Dealer {
 
@@ -27,14 +27,14 @@ private ArrayList<Integer> deck;
     this.deck = new ArrayList<Integer>(51);
   }
     
-  public int getOneCard(int[] cardNumber) 
+public int getOneCard(int[] cardNumber) 
  {  
      int[] card = cardNumber;
      int oneCard = card[new Random().nextInt(card.length)];
      return oneCard;
  } 
  
- public int[] getCommunityCards()
+public int[] getCommunityCards()
 { 
     return this.communityCards;
 }
@@ -48,5 +48,28 @@ public int[] getPlayer2TowCards()
 {
  return this.player2Cards; 
 }
+
+public String identifyWinner(int player1Hand, int player2Hand){
+        if(player1Hand < player2Hand){
+            return "Player1";
+        }
+        if(player1Hand > player2Hand){
+            return "Player2";
+        }
+        return "TIE";
+        
+}
+
+ public void dealCards(){
+        for(int i = 0; i <= 4; i++) communityCards[i] = deck.get(i);
+        for(int i = 0; i <= 1; i++) player1Cards[i] = deck.get(i+5);
+        for(int i = 0; i <= 1; i++) player2Cards[i] = deck.get(i+7);
+    
+    }
+ 
+ public void shuffleDeck(){
+        Collections.shuffle(this.deck);
+    }
+
 
 }
