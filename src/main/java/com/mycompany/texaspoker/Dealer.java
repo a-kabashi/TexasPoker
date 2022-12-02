@@ -13,7 +13,7 @@ import java.util.Random;
  *
  * @author User
  */
-class Dealer {
+class Dealer1 {
     
  private ArrayList<Integer> deck;   
  private int[] communityCards; 
