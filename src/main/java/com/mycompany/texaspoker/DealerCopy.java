@@ -43,5 +43,35 @@ public int[] getPlayerTowCards()
 {
  return this.playerCards; 
 }
+    
+    
+    // added part for the Dealer.   
+ 
+    public String identifyWinner(int playerHand, int ComputerHand){
+        if(playerHand < ComputerHand){
+            return "Player";
+        }
+        if(playerHand > ComputerHand){
+            return "Computer";
+        }
+        return "Draw";
+    
+    }
+    
+    public void dealCards(){
+        for(int i = 0; i <= 4; i++) communityCards[i] = deck.get(i);
+        for(int i = 0; i <= 1; i++) playerCards[i] = deck.get(i+5);
+        for(int i = 0; i <= 1; i++) computerCards[i] = deck.get(i+7);
+    }
+    
+    
+       public void shuffleDeck(){
+        Collections.shuffle(this.deck);
+    }
+    
+    
+    
+    
+    
 
 }
