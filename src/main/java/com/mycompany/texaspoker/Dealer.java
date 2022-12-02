@@ -16,12 +16,14 @@ class Dealer {
     
  private ArrayList<Integer> deck;   
  private int[] communityCards; 
- private int[] playerCards;
+ private int[] player1Cards;
+ private int[] player2Cards;
  
   Dealer()
   {
     this.communityCards = new int[5];
-    this.playerCards = new int[2];
+    this.player1Cards = new int[2];
+    this.player2Cards = new int[2];
     this.deck = new ArrayList<Integer>(51);
   }
    
@@ -38,9 +40,16 @@ class Dealer {
     return this.communityCards;
 }
  
-public int[] getPlayerTowCards()
+public int[] getPlayer1TowCards()
 {
- return this.playerCards; 
+ return this.player1Cards; 
 }
+
+public int[] getPlayer2TowCards()
+{
+ return this.player2Cards; 
+}
+
+
 
 }
