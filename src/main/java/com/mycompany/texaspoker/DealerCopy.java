@@ -6,6 +6,7 @@
 package com.mycompany.texaspoker;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Collections;
 
 
 
@@ -13,18 +14,20 @@ import java.util.Random;
  *
  * @author User
  */
-class Dealer1 {
+class DealerCopy {
     
  private ArrayList<Integer> deck;   
  private int[] communityCards; 
+ private int[] playerCards;//PLAYER 1
  private int[] player1Cards;//PLAYER 1
  private int[] player2Cards;// PLAYER 2
 
  
-  Dealer()
+  DealerCopy()
   {
     this.communityCards = new int[5];
-    this.playerCards = new int[2];
+    this.player1Cards = new int[2];
+    this.player2Cards = new int[2];
     this.deck = new ArrayList<Integer>(51);
   }
    
