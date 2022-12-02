@@ -58,6 +58,13 @@ public String identifyWinner(int player1Hand, int player2Hand){
             return "Player2";
         }
         return "TIE";
+        
+}
+
+ public void dealCards(){
+        for(int i = 0; i <= 4; i++) communityCards[i] = deck.get(i);
+        for(int i = 0; i <= 1; i++) player1Cards[i] = deck.get(i+5);
+        for(int i = 0; i <= 1; i++) player2Cards[i] = deck.get(i+7);
     
     }
 
