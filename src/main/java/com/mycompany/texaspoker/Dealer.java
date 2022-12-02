@@ -50,6 +50,16 @@ public int[] getPlayer2TowCards()
  return this.player2Cards; 
 }
 
+public String identifyWinner(int player1Hand, int player2Hand){
+        if(player1Hand < player2Hand){
+            return "Player1";
+        }
+        if(player1Hand > player2Hand){
+            return "Player2";
+        }
+        return "TIE";
+    
+    }
 
 
 }
