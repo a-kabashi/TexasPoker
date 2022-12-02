@@ -4,6 +4,8 @@
  */
 package com.mycompany.texaspoker;
 
+import java.util.Arrays;
+
 /**
  *
  * @author User
@@ -76,26 +78,21 @@ class GameLogic {
         }
 
     }
+        public boolean Royal_Flush(int[] hand) {
+        sortArr(hand);// sorting the array hand.
+        // all posable cases for Royal hands.
+        int[] h = { 0, 9, 10, 11, 12 };
+        int[] d = { 13, 22, 23, 24, 25 };
+        int[] c = { 26, 35, 36, 37, 38 };
+        int[] s = { 39, 48, 49, 50, 51 };
 
-    private boolean isItStraigthAceTop(int[] hand) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        if (Arrays.equals(hand, h) || Arrays.equals(hand, d) || Arrays.equals(hand, c) || Arrays.equals(hand, s))
+            return true;
+        return false;
 
-    private boolean isSameKind(int[] hand) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
-    private boolean Royal_Flush(int[] hand) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
-    // ESRAA PART ***************************************************************************************************************************************//
-    
- /*
-    *this method it takes an array of integer and return boolean, its for detearmain
-    *if the hand its the same kind or not.
-    */
- public boolean isSameKind(int[] hand) {
+        
+        public boolean isSameKind(int[] hand) {
         int cont;
         for (int i = 0; i < 4; i++) {
             cont = 0;
@@ -107,7 +104,33 @@ class GameLogic {
                 return true;
         } 
         return false;
- }
+    }
+        
+        public boolean isItStraigthAceTop(int[] hand) {
+
+        int han[] = new int[5];
+
+        // for loop copy hand into new array, whenever find Ace card, change its position
+        // to the king position, else will push all the card one number down
+
+        for (int i = 0; i < hand.length; i++) {
+            if (hand[i] % 13 == 0)
+                han[i] = hand[i] + 12;
+            else
+                han[i] = hand[i] - 1;
+        } // end of for loop
+
+        sortArr(han);
+
+        // then try to determine is the new array is straight or not
+        for (int i = 0; i < han.length - 1; i++)
+            if (han[i] % 13 != han[i + 1] % 13 - 1)
+                return false;
+
+        return true;
+    }
+
+
 
   // this method for sorting the array hand base on suite.it's check the hand in all deck 52 cards.
   public int[] sortArr(int[] hand) {
@@ -132,7 +155,7 @@ class GameLogic {
     }
 
 // this method for checking the 10 ways trying the best one first going to the lower rank.
-public String[] helper(int[] fiveCards, int[] twoCards){
+public String[] helper(int[] fiveCards, int[] towCards){
 
         int[] bestHand = new int[5];
         String[] compare = new String[10];
