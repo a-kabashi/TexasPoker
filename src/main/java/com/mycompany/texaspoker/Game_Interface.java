@@ -253,6 +253,8 @@ public class Game_Interface extends javax.swing.JFrame {
     private void jButton2_RestartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_RestartActionPerformed
         // TODO add your handling code here:
         this.dispose();
+        StarterGamePage sGP = new StarterGamePage();
+        sGP.setVisible(true);
         //Settings_Interface2 frame = new Settings_Interface2();
         //frame.setVisible(true);
     }//GEN-LAST:event_jButton2_RestartActionPerformed

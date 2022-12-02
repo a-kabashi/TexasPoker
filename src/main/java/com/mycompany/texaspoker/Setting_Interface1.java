@@ -105,34 +105,24 @@ public class Setting_Interface1 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        if(jTextField5.getText().equalsIgnoreCase(""))
-        {
+        String text5 = jTextField5.getText();
+        String text6 = jTextField6.getText();
+        if(text5.equalsIgnoreCase("")){
             player1.setName("Player1");
+        }else{
+            player1.setName(text5);
         }
-        else
-        {
-            player1.setName(jTextField5.getText());
+        if(!text6.equalsIgnoreCase("")){
+            player1.setBuyInAmount(Integer.parseInt(text6));
         }
-        
-        String player1_Name = jTextField5.getText();
-        String player1_buyInAmount = jTextField6.getText();
-        
-        if(!jTextField6.getText().equalsIgnoreCase("")){
-            player1.setBuyInAmount(Integer.parseInt(player1_buyInAmount));
-        }
-        
-        int I_player1_buyInAmount = Integer.parseInt(player1_buyInAmount) ;
         player2.setName("Dealer");
-        String player2_Name = "Dealer";
         player2.setBuyInAmount(1000);
-        int I_player2_buyInAmount = 1000;
-        
-        Game_Interface gP = new  Game_Interface(player1_Name,I_player1_buyInAmount,player2_Name, I_player2_buyInAmount );
+        Game_Interface gP = new Game_Interface(player1.getName(),player1.getBuyInAmount(),player2.getName(),player2.getBuyInAmount());
         Color color = new Color(10, 14 ,147);
         gP.getContentPane().setBackground(color);
         gP.setLocationRelativeTo(null);
         gP.setVisible(true);
-        //this.setVisible(false);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
