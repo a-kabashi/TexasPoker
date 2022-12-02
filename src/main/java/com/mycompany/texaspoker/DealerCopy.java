@@ -17,7 +17,9 @@ class Dealer1 {
     
  private ArrayList<Integer> deck;   
  private int[] communityCards; 
- private int[] playerCards;
+ private int[] player1Cards;//PLAYER 1
+ private int[] player2Cards;// PLAYER 2
+
  
   Dealer()
   {
@@ -43,5 +45,35 @@ public int[] getPlayerTowCards()
 {
  return this.playerCards; 
 }
+    
+    
+    // added part for the Dealer.   
+ 
+    public String identifyWinner(int player1Hand, int player2Hand){
+        if(player1Hand < player2Hand){
+            return "Player1";
+        }
+        if(player1Hand > player2Hand){
+            return "Player2";
+        }
+        return "TIE";
+    
+    }
+    
+    public void dealCards(){
+        for(int i = 0; i <= 4; i++) communityCards[i] = deck.get(i);
+        for(int i = 0; i <= 1; i++) player1Cards[i] = deck.get(i+5);
+        for(int i = 0; i <= 1; i++) player2Cards[i] = deck.get(i+7);
+    }
+    
+    
+       public void shuffleDeck(){
+        Collections.shuffle(this.deck);
+    }
+    
+    
+    
+    
+    
 
 }
